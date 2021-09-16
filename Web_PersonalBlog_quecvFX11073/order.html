@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By book</title>
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/stylesheet1.css">
+    <link rel="stylesheet" href="css/layuot.css">
+    <script src="js/order.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+        <!-- header -->
+        <div class="header">
+            <img src="images/backgound.png" alt="">
+
+            <div class="header-content">
+                <h4>BOOK BUY</h4>
+                <p>Trong cuộc sông có rất nhiều lựa chọn. <br> Cảm ơn bạn đã lựa chọn chúng tôi!</p>
+            </div>
+        </div>
+        <!-- menu trang -->
+        <!-- class "navbar-expand-sm" xep thanh dieu huong thoe chieu doc o man hinh nho. xoa no dde hien thi thanh
+        dieu huong theo chieu doc -->
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <div class="container-fluid">
+                <div>
+                    <!-- logo and button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">BookBy</a>
+                </div>
+                <div class="navbar-collapse collapse" id="myNavbar">
+                    <!-- nav -->
+                    <ul class="navbar-nav active ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">The Book</a>
+                            <!-- dropdown -->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="details-1.html" class="dropdown-item">Muôn kiếp nhân sinh</a>
+                                </li>
+                                <li>
+                                    <a href="details-2.html" class="dropdown-item">Hành trình Về Phương Đông</a>
+                                </li>
+                                <li>
+                                    <a href="details-3.html" class="dropdown-item">Kiếp Nào Ta Cũng Tìm Thấy Nhau</a>
+                                </li>
+                                <li>
+                                    <a href="details-4.html" class="dropdown-item">Truyện Kiều</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order.html" class="nav-link">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+<!-- noi dung chung cua order -->
+    <div class="form container">
+        <div class="text-content">
+            <h2>Dặt sách online</h2>
+            <h3>Không bao giờ sai</h3>
+        </div>
+
+        <form class="form-content" action="">
+            <div class="form-group">
+                <!-- Tạo bảng chọn loại sách muốn order -->
+                <label for="selectBook" class="color-red">Chọn Sách</label>
+                <select class="form-control" name="selectBook" id="selectBook" required>
+                    <option disabled selected hidden>--------Select-----------</option>
+                    <option value="mkns">Muôn Kiếp Nhân Sinh</option>
+                    <option value="htvpd">Hành trình về phương đông</option>
+                    <option value="kntcttn">Kiếp nào ta cũng tìm thấy nhau</option>
+                    <option value="tk">Truyện kiều</option>
+                </select>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="yname" class="color-red">Tên của Bạn</label>
+                <input class="form-control" type="text" name="yname" id="yname" value=""
+                    title="Name you and less than 100 char" required>
+            </div>
+            <br>
+            <div class="form-group">
+
+                <label for="sign" class="color-red">Mẫu Chữ Ký</label>
+                <input class="form-control" type="text" name="sign" id="sign" title="nhap duoi 30 ky tu" required>
+            </div>
+            <br>
+            <h5>Dịch vụ thêm free</h5>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="includes" id="includes" value="bocsach"> Bọc sách
+                </label> <br>
+                <label>
+
+                    <input type="checkbox" name="includes" id="includes" value="bookmark"> Bookmark
+                </label> <br>
+                <label>
+
+                    <input type="checkbox" name="includes" id="includes" value="giamgia"> Giảm Giá 5%
+                </label>
+            </div>
+            <br>
+            <div class="form-group">
+
+                <label for="deliverdate" class="color-red">Ngày Giao Hàng</label>
+                <input class="form-control" type="date" id="deliverdate"
+                    pattern="(0 [1-9] | 1 [012]) [- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20) \ d \ d" required
+                    onchange="daTe(this)"> <br>
+            </div>
+            <div class="form-group">
+                <label for="contactFormMessage" class="color-red">Nội dung</label>
+
+                <textarea class="form-control" name="contactFormMessage" rows="10" id="contactFormMessage"
+                    title="Nhap duoi 500 ky tu" placeholder="Nội dung" required></textarea>
+            </div>
+
+            <h5>
+                Gọi trước khi giao hàng
+            </h5>
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <label>
+                        <input type="radio" name="yes-no" id="yes-no">Có
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label>
+                        <input type="radio" name="yes-no" id="yes-no" checked>Không
+                    </label>
+                </div>
+            </div>
+
+            <br>
+            <input type="submit" value="Gửi đi" class="submit" id="submit" onclick="subMit()" required>
+
+    </div>
+
+    </div>
+    <!-- CUOI TRANG -->
+    <div class=" container-fluid foodter">
+        <h4>Thông tin liên hệ</h4>
+        <p>queesca@gmail.com</p>
+        <p>0967.747.745</p>
+        <i class="fa fa-copyright"> 2021 By Quees</i>
+    </div>
+</body>
+
+</html>

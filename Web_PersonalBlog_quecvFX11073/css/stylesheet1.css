@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+
+/* style for menu */
+.header img{
+    width: 100%;
+}
+
+.header .header-content {
+    display: none;
+}
+
+.header-content h4, .header-content p {
+    text-align: center;
+}
+
+/* style content */
+.leftcolumn, .rightcolumn {
+    float: left;
+}
+
+.column2 {
+    float: left;
+}
+
+.column2 h3 {
+    text-align: center;
+    
+}
+
+.card {
+    background-color: white;
+    padding: 1.4em;
+    margin-top: 1.4em;
+    height: 500px;
+}
+
+.card p {
+    overflow: hidden;
+}
+
+.fakeimg {
+    display: flex;
+    width: 100%;
+    padding: 1.4em;  
+    height: 12.5em;
+    align-items: center;
+    justify-content: center; 
+}
+
+.fakeimg img {
+    height: 100%;
+}
+
+
+/* style foodter */
+.foodter {
+    width: 200px; 
+    text-align: center;
+    padding: 1.4em 0 1.4em 0;
+
+}
+
+/* style for details */
+.details-content img {
+    width: 100%;
+}
+.main-content {
+    padding-top: 2em;
+}
+
+.main-content h3 {
+    text-align: center;
+    padding: 2em;
+}
+
+
+/* style for order and contact */
+/* Tại kiểu cho order.html */
+.text-content {
+    text-align: center;
+    color: #0072ff;
+    margin-top: 1em;
+}

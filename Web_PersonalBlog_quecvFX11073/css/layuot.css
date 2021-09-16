@@ -1,0 +1,40 @@
+
+* {
+    box-sizing: border-box;
+}
+/*  clearfix xoa phan noi */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.row {
+    margin-left: 0;
+    margin-right: 0 ;
+}
+/* mobile */
+@media screen and (max-width:767px){
+    
+}
+
+
+/* screen tablet */
+@media screen and (min-width: 768px){
+    
+    /* cho phan chhu hien ra */
+    .header .header-content {
+        position: absolute;
+        display: inline-block; 
+        left: 50%;
+        top: 5%;
+        transform: translate(-50%, 0%);
+    }
+    body {
+        background-color: #ccc;
+    }
+}
+/* screen pc */
+@media screen and (min-width: 992px) {
+    
+}
