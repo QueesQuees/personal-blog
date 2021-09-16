@@ -1,4 +1,4 @@
-# personal-blog
+# Website-personal-blog
 Project building a personal blog
 - Create HTML5 structure for website
 - Use CSS to decorate the website
